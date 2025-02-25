@@ -37,7 +37,7 @@ const router = {
     try {
       res.json(lista.updatePost(req.params.id, req.body));
     } catch (error) {
-      res.status(404).json({ message: "Erro ao atualizar o usuário", error });
+      res.status(404).json({ message: "Erro ao atualizar o post", error });
     }
   },
 

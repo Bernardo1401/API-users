@@ -13,12 +13,12 @@ class PostList {
 
     getPostById(id) {
         const post = this.posts.find(post => post.id == id);
-        if (!post) throw new Error("Esse post não existe em nosa rede");
+        if (!post) throw new Error("Esse post não existe em nossa rede");
         return post;
     }
 
     updatePost(id, updatedData) {
-        const post = this.getpostById(id);
+        const post = this.getPostById(id);
         Object.assign(post, updatedData);
         return post;
     }
