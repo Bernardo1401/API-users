@@ -8,8 +8,11 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
-const usersRoutes = require("./routes/usersRoutes");
-app.use("/api", usersRoutes);
+const userRoutes = require("./routes/userRoutes");
+app.use("/api", userRoutes);
+
+const postRoutes = require("./routes/postRoutes");
+app.use("/api", postRoutes);
 
 app.listen(PORT, () => {
     console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
