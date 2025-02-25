@@ -21,11 +21,11 @@ const router = {
 
   addPost: (req, res) => {
     try {
-      const { idUser, like, comments, description, image } = req.body;
+      const { idUser, like, comment, description, image } = req.body;
       if (!idUser) {
         throw new Error("É necessário ter um usuário vinculado ao seu post");
       }
-      const newPost = new Post(idUser, like, comments, description, image);
+      const newPost = new Post(idUser, like, comment, description, image);
       lista.addPost(newPost);
       res.status(201).json(newPost);
     } catch (error) {
