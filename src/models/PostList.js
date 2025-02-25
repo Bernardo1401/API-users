@@ -13,7 +13,7 @@ class PostList {
 
     getPostById(id) {
         const post = this.posts.find(post => post.id == id);
-        if (!post) throw new Error("Este post não existe em nosa rede");
+        if (!post) throw new Error("Esse post não existe em nosa rede");
         return post;
     }
 
