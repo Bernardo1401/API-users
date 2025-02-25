@@ -3,8 +3,8 @@ const PostList = require("../models/PostList");
 const lista = new PostList();
 
 
-lista.addPost(new Post(1000, 400, "Foto do meu dog", "https://www.dog.com"));
-lista.addPost(new Post(300, 20, "lolzinho", "https://www.lol.com"));
+lista.addPost(new Post("", 1000, 400, "Foto do meu dog", "https://www.dog.com"));
+lista.addPost(new Post("", 300, 20, "lolzinho", "https://www.lol.com"));
 
 const router = {
   getAllPosts: (req, res) => {
