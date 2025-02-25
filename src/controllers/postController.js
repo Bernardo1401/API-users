@@ -22,8 +22,8 @@ const router = {
   addPost: (req, res) => {
     try {
       const { idUser, like, comment, description, image } = req.body;
-      if (!idUser) {
-        throw new Error("É necessário ter um usuário vinculado ao seu post");
+      if (!idUser, !like, !comment, !description, !image) {
+        throw new Error("É necessário preencher todos os campos para criar um post");
       }
       const newPost = new Post(idUser, like, comment, description, image);
       lista.addPost(newPost);
